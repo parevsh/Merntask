@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./stylestask6.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="avatar">
+        <img src="./Assets/user.jpg" alt="Avatar" />
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter Username"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter Password"
+          />
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+        <div class="form-group">
+          <input type="checkbox" id="remember" name="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+        <div class="form-footer">
+          <button type="button" class="cancel-btn">Cancel</button>
+          <a href="#" class="forgot-pw">Forgot <span>password?</span></a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

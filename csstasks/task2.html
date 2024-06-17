@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+      }
+      .nav,
+      .nav1 {
+        background-color: aqua;
+      }
+      .nav {
+        position: fixed;
+      }
+      .nav1 {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+      .nav div,
+      .nav1 div {
+        width: 100px;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+      }
+      .nav div:hover,
+      .nav1 div:hover {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <div>Home</div>
+        <div>Java</div>
+        <div>Css</div>
+        <div>Bootstrap</div>
+      </div>
+      <div class="nav1">
+        <div>Home</div>
+        <div>Java</div>
+        <div>Css</div>
+        <div>Bootstrap</div>
+      </div>
+    </div>
+  </body>
+</html>
