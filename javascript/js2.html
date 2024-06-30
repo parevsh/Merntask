@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sort Letters in String</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+        
+    }
+    .result {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Sort Letters in String</h2>
+    <form id="sortForm">
+        <label for="stringInput">Enter a string:</label>
+        <input type="text" id="stringInput" name="stringInput" >
+        <button type="submit">Sort</button>
+    </form>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function sortString() {
+        event.preventDefault();
+        const string = document.getElementById('stringInput').value;
+        const sortedString = string.split('').sort().join('');
+        document.getElementById('result').textContent = `Sorted String: ${sortedString}`;
+    }
+
+    document.getElementById('sortForm').addEventListener('submit', sortString);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Show Date and Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+           
+        }
+
+        div {
+            margin: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <button id="showDateButton">Show Date</button>
+    <div id="dateDisplay"></div>
+    <button id="showTimeButton">Show Time</button>
+    <div id="timeDisplay"></div>
+    <script>
+        document.getElementById('showDateButton').addEventListener('click', function() {
+            const today = new Date();
+            const date = `${today.getDate()}/${today.toLocaleString('default', { month: 'long' })}/${today.getFullYear()}`;
+            document.getElementById('dateDisplay').textContent = date;
+        });
+
+        document.getElementById('showTimeButton').addEventListener('click', function() {
+            const today = new Date();
+            const time = today.toLocaleString('en-US', { timeZone: 'Asia/Kolkata', timeStyle: 'long', dateStyle: 'full' });
+            document.getElementById('timeDisplay').textContent = time;
+        });
+    </script>
+</body>
+</html>

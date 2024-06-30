@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            position: relative;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        img {
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+
+        .controls {
+            margin-top: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .heading {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000080;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="train.jfif" alt="Train" id="train">
+    </div>
+    <div class="heading">Click the following buttons to handle animation</div>
+    <div class="controls">
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+    </div>
+
+    <script>
+        let train = document.getElementById('train');
+        let startButton = document.getElementById('startButton');
+        let stopButton = document.getElementById('stopButton');
+        let interval;
+        let position = 0;
+
+        startButton.addEventListener('click', function() {
+            clearInterval(interval);
+            interval = setInterval(function() {
+                if (position >= 600) {
+                    position = 0;
+                } else {
+                    position += 5;
+                    train.style.left = position + 'px';
+                }
+            }, 50);
+        });
+
+        stopButton.addEventListener('click', function() {
+            clearInterval(interval);
+        });
+    </script>
+</body>
+</html>
